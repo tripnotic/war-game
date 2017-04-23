@@ -42,7 +42,7 @@ export default class domEvents {
         // dodanie animacji
         setTimeout(function(){
             [].map.call(that.playerCardBlock, (el) => el.classList.add('flipped'));
-        }, 500);
+        }, 100);
         
     }
 

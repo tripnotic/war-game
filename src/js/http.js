@@ -4,7 +4,8 @@ export default class Http{
 	get(url){
         return new Promise(function(resolve, reject) {
             let req = new XMLHttpRequest();
-            req.open('GET', API_URL + url);
+            
+            req.open('GET', API_URL + url + '&cache=' + (Math.random()*1000000));
             req.onload = function() {
                 if (req.status === 200) {
                     resolve(req.response);
@@ -16,7 +17,7 @@ export default class Http{
             req.onerror = function() {
                 reject(new Error('Network error'));
             };
-
+            
             req.send();
         });
     }

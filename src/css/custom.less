@@ -145,20 +145,20 @@ a{
     perspective: 1000px;
     left: -50%;
     &.flipped{
-    	transition: 0.6s;
+    	transition: 1s;
     	left: 0;
 		.player__card--flipper{
 			left: 0;
 			
 		}
 		.player__card--front{
-			transition: 0.6s;
-			-webkit-transition: 0.6s;
+			transition: 1s;
+			-webkit-transition: 1s;
 			transform: rotateY(180deg);
 		}
 		.player__card--back{
-			transition: 0.6s;
-			-webkit-transition: 0.6s;
+			transition: 1s;
+			-webkit-transition: 1s;
 			transform: rotateY(0deg);
 		}
 	}
@@ -186,8 +186,6 @@ a{
 	width: @cardWidth;
 	background: #fff;
     border-radius: 8px;
-    
-
 }
 .player__card--front{
 	z-index: 2;
@@ -227,7 +225,7 @@ a{
 	position: relative;
 	top: 36px;
 	opacity: 1;
-	transition: 0.6s;
+	transition: 1s;
 	&:before{
 		content: '';
 		display: block;
@@ -302,4 +300,13 @@ a{
 		float: left;
 		width: 50%;
 	}
+}
+
+// IE 10 & 11 - warunek
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   .player__card.flipped {
+   		.player__card--front, .player__card--back{
+   			transition: none;
+   		}
+   }
 }
