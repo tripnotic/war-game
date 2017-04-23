@@ -1,0 +1,11 @@
+.group {
+  zoom: 1;
+}
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}

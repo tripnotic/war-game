@@ -1,0 +1,29 @@
+{
+  "name": "war_game",
+  "version": "1.0.0",
+  "description": "War card game",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "war-game.git"
+  },
+  "author": "Marcin Kaczmarzyk",
+  "license": "ISC",
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "es6-promise": "^4.1.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-cssmin": "^2.1.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.3.0",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
