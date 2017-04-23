@@ -1406,7 +1406,7 @@ var domEvents = function () {
                 [].map.call(that.playerCardBlock, function (el) {
                     return el.classList.add('flipped');
                 });
-            }, 500);
+            }, 100);
         }
 
         // usunięcie kart ze stołu
@@ -1756,7 +1756,8 @@ var Http = function () {
         value: function get(url) {
             return new _Promise(function (resolve, reject) {
                 var req = new XMLHttpRequest();
-                req.open('GET', API_URL + url);
+
+                req.open('GET', API_URL + url + '&cache=' + Math.random() * 1000000);
                 req.onload = function () {
                     if (req.status === 200) {
                         resolve(req.response);
